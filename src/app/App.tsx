@@ -7,7 +7,14 @@ import GameLayout from "./game/GameLayout"
 import Chapiters from "./game/Chapiters"
 import MenuLayout from "./game/MenuLayout"
 
+import gameTrack from "../assets/audios/game-music-loop.mp3";
+
 function App() {
+
+	// play game music
+	const audio = new Audio(gameTrack);
+	audio.loop = true;
+	audio.play();
 
 	return (<>
 		<Routes>

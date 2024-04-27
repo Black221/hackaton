@@ -5,6 +5,9 @@ import Button from "../../components/Button";
 import useMainState from "../../hooks/useMainState";
 import DisplayAnswer from "../../components/DisplayAnswer";
 
+import gameOver from "../../assets/audios/game-over.mp3";
+import gameWin from "../../assets/audios/game-win2.mp3";
+
 
 export default function GameLayout() {
 
@@ -15,8 +18,19 @@ export default function GameLayout() {
 
 
     const isCorrect = (): boolean => {
-        return responses[question] === ((cGame && cGame.questions[question].response) ? cGame.questions[question].response : undefined);
+        const res = responses[question] === ((cGame && cGame.questions[question].response) ? cGame.questions[question].response : undefined);
+        if (res) {
+            audioWin.play();
+        } else {
+            audioOver.play();
+        }
+        return res;
     }
+
+    const audioWin = new Audio(gameWin);
+    audioWin.volume = 1;
+    const audioOver = new Audio(gameOver);
+    audioOver.volume = 1;
 
     return (<>
         <div className={"w-full h-screen flex items-center flex-col space-y-4 p-2"}>

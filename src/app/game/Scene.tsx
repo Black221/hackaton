@@ -27,6 +27,7 @@ export default function Scene() {
                 }
             });
         }
+        // eslint-disable-next-line
     }, []);
 
     const [ selected, setSelected ] = useState<string | null>(null);
