@@ -12,7 +12,7 @@ export default function MenuLayout() {
 
     return(<>
         <div className="w-full flex flex-col items-center justify-center h-full ">
-            <div className="w-[95%] rounded-xl flex items-center justify-between relative z-80  bg-white p-3 py-4 mt-3 border ">
+            <div className="w-[95%] rounded-xl flex items-center justify-between relative z-80  bg-white p-3 py-4 mt-3 border-2 border-green-2 ">
                 <h1 className="flex flex-col items-center">
                     <img src={profile} alt="profile" className="w-10 h-10" />
                     {user?.getName()}
