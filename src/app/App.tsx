@@ -10,18 +10,14 @@ import MenuLayout from "./game/MenuLayout"
 import RunGameLayout from "./run/GameLayout"
 import RunScene from "./run/Scene"
 import gameTrack from "../assets/audios/game-music-loop.mp3";
-import { useEffect } from "react"
 
 function App() {
 
-	// play game music
-	useEffect(() => {
 		const audio = new Audio(gameTrack);
 		audio.loop = true;
 		audio.play();
-	}, [])
 
-	
+
 
 	return (<>
 		<Routes>
