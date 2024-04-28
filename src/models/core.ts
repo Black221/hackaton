@@ -27,6 +27,7 @@ export interface Question {
     video?: string;
     text?: string;
     response: string;
+    key?: string[];
     choices: string[];
     choicesImages?: string[];
     choicesAudios?: string[];

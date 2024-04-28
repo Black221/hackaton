@@ -20,9 +20,10 @@ export default function ResponseItem({ response, action }: ResponseItemProps) {
     return (
         <div onClick={action} className="w-full h-full flex items-center justify-center">
             {extention(response) === "video" 
-            ? <video src={response} autoPlay loop className="w-full h-full object-cover" /> 
-            : extention(response) === "image" ? <img src={response} alt="response" className="w-16 h-16 object-cover" />
-            : <h1 className="text-2xl text-black font-bold text-center">{response}</h1>}
+            ? <video src={response} autoPlay loop className="w-auto h-full object-cover" /> 
+            : extention(response) === "image" 
+            ? <img src={response} alt="response" className="w-auto h-16 object-cover" />
+            : <h1 className="text-xl text-black font-bold text-center">{response}</h1>}
         </div>
     )
 }

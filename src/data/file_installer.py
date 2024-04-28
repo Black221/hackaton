@@ -18,37 +18,12 @@ def install_images(image_urls, image_dir):
 
 
 dic = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
+    "chat",
 ]
 
-url = "https://apprendre.tv5monde.com/sites/apprendre.tv5monde.com/files/audio"
+url = "https://projects.lib.rochester.edu/lsf-asl/wp-content/uploads/"
 
-image_urls = [f"{url}/{d}.mp3" for d in dic]
+image_urls = [f"{url}/{d}_mobile.mp4" for d in dic]
 
 image_dir = "src/assets/signs_word"
 

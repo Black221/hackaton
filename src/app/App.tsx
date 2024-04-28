@@ -7,14 +7,21 @@ import GameLayout from "./game/GameLayout"
 import Chapiters from "./game/Chapiters"
 import MenuLayout from "./game/MenuLayout"
 
+import RunGameLayout from "./run/GameLayout"
+import RunScene from "./run/Scene"
 import gameTrack from "../assets/audios/game-music-loop.mp3";
+import { useEffect } from "react"
 
 function App() {
 
 	// play game music
-	const audio = new Audio(gameTrack);
-	audio.loop = true;
-	audio.play();
+	useEffect(() => {
+		const audio = new Audio(gameTrack);
+		audio.loop = true;
+		audio.play();
+	}, [])
+
+	
 
 	return (<>
 		<Routes>
@@ -23,6 +30,10 @@ function App() {
 				<Route element={<MenuLayout />} >
 					<Route path="/" element={<Home />} />
 					<Route path="/:type" element={<Chapiters />} />
+				</Route>
+
+				<Route element={<RunGameLayout />}>
+					<Route path="/:type/run/:id" element={<RunScene />} />
 				</Route>
 
 				<Route element={<GameLayout />}>

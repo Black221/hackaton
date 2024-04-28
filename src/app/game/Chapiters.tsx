@@ -44,14 +44,14 @@ export default function Chapiters() {
                     () => navigate('/game')
                 } active={true}  />
             </div>
-            <div ref={ref} className="w-full relative border-2 rounded-xl overflow-scroll overflow-x-hidden h-[56vh] flex items-center justify-center flex-wrap content-start ">
+            <div ref={ref} className="w-full relative border-2 rounded-xl overflow-scroll overflow-x-hidden h-[56vh] ">
                 <div className="fixed   -z-10">
                     <img src={gameBgs[0]} alt="bg" className="w-full h-full object-cover" />
                 </div>
                 {gamesByTheme.map((game, index) => {
                     return (
                         //curve display
-                        <div key={index} className="w-1/2 h-1/2 flex items-center justify-center">
+                        <div key={index} className="flex w-full">
                             <ChapiterItem game={game} action={() => {
                                 setSelected(game);
                             }} isSelected={

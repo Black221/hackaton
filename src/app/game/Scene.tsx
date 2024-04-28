@@ -15,18 +15,18 @@ export default function Scene() {
     }, [responses]);
 
     useEffect(() => {
-        window.speechSynthesis.speak(new SpeechSynthesisUtterance(cGame && cGame.questions[question].label));
-        if (gameType == "braille") {
-            window.addEventListener('keydown', (e) => {
-                if (responses.length < question ) {
-                    setResponses([...responses, e.key]);
-                } else {
-                    const tab = responses;
-                    tab[question] = e.key;
-                    setResponses([...tab]);
-                }
-            });
-        }
+        // window.speechSynthesis.speak(new SpeechSynthesisUtterance(cGame && cGame.questions[question].label));
+        // if (gameType == "braille") {
+        //     window.addEventListener('keydown', (e) => {
+        //         if (responses.length < question ) {
+        //             setResponses([...responses, e.key]);
+        //         } else {
+        //             const tab = responses;
+        //             tab[question] = e.key;
+        //             setResponses([...tab]);
+        //         }
+        //     });
+        // }
         // eslint-disable-next-line
     }, []);
 

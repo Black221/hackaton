@@ -2,21 +2,17 @@
 
 // type of handicaped user
 export enum typeOfHandicape {
-    mental,
     visual,
     auditory,
     speech,
-    cognitive,
     none
 }
 
 export function fromStringToTypeOfHandicape(type: string): typeOfHandicape {
     switch (type) {
-        case 'mental': return typeOfHandicape.mental;
         case 'visual': return typeOfHandicape.visual;
         case 'auditory': return typeOfHandicape.auditory;
         case 'speech': return typeOfHandicape.speech;
-        case 'cognitive': return typeOfHandicape.cognitive;
         default: return typeOfHandicape.none;
     }
 }

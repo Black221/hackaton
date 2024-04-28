@@ -17,9 +17,9 @@ export default function Question({ question }: QuestionProps) {
     const getQuestion = () => {
         switch (type) {
             case "image":
-                return <img src={question.image} alt="question" className="w-full h-full object-cover" />
+                return <img src={question.image} alt="question" className="w-auto h-full object-cover" />
             case "video":
-                return <video src={question.video} muted autoPlay loop className="w-full h-full object-cover" />
+                return <video src={question.video} muted autoPlay loop className="w-auto h-full object-cover" />
             case "text":
                 return <h1 className="text-[120px] text-black font-bold text-center">{question.text}</h1>
             case "audio":
