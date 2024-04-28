@@ -21,7 +21,7 @@ export default function Question({ question }: QuestionProps) {
             case "video":
                 return <video src={question.video} muted autoPlay loop className="w-auto h-full object-cover" />
             case "text":
-                return <h1 className="text-[120px] text-black font-bold text-center">{question.text}</h1>
+                return <h1 className="text-[90px] text-black font-bold text-center">{question.text}</h1>
             case "audio":
                 return <Audio src={audio} />
             default:
